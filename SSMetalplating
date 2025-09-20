@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PS MetalTech — Surface Coating & Metal Finishing</title>
+  <meta name="description" content="Premium metal finishing & protective coatings for automotive, aerospace and manufacturing clients. Electroless nickel plating, polishing and inspection." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#0b6b78;
+      --accent-dark:#094f56;
+      --muted:#6b7280;
+      --bg:#fbfdfe;
+      --card:#ffffff;
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f1724;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{background:linear-gradient(90deg,#ffffffcc, #f5fbfc);backdrop-filter:saturate(120%) blur(6px);position:sticky;top:0;z-index:40;border-bottom:1px solid #e6eef0}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    .brand h1{font-size:16px;margin:0}
+    .tag{font-size:12px;color:var(--muted);margin-top:2px}
+    nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    nav a{color:inherit;text-decoration:none;font-weight:600}
+    .cta{background:var(--accent);color:#fff;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .phone{display:inline-flex;align-items:center;gap:8px}
+
+    /* Hero */
+    .hero{padding:48px 0;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .hero-card{background:linear-gradient(180deg,#fff, #fbffff);border-radius:var(--radius);box-shadow:0 6px 30px rgba(7,22,25,0.06);padding:28px}
+    h2{font-size:28px;margin:0 0 10px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .kpis{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .kpi{background:#f7fcfd;border-radius:12px;padding:12px 14px;font-weight:600}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+    .service{background:var(--card);padding:18px;border-radius:12px;border:1px solid #eef6f7}
+    .service h3{margin:0 0 8px}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+
+    /* About & Why */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+    .bullets{list-style:none;padding:0;margin:0}
+    .bullets li{padding:10px 0;border-bottom:1px dashed #eef6f7;color:var(--muted)}
+
+    /* Contact */
+    .contact{background:linear-gradient(180deg,#fff,#f8feff);padding:20px;border-radius:12px;border:1px solid #e7f6f7}
+    form{display:grid;gap:10px}
+    input,textarea,select{padding:12px;border-radius:10px;border:1px solid #d9eef0;font-size:14px}
+    button{background:var(--accent);color:#fff;padding:12px;border-radius:10px;border:0;font-weight:700}
+
+    footer{margin-top:36px;padding:28px 0;color:var(--muted);border-top:1px solid #e6eef0}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+      nav ul{display:none}
+      .mobile-toggle{display:inline-flex}
+    }
+    .mobile-toggle{display:none;background:transparent;border:0;font-size:18px}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#f0fbfb;border:1px solid #e6f6f7;font-weight:700}
+  </style>
+
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">SS</div>
+        <div>
+          <h1>Shine and Shield</h1>
+          <div class="tag">metal plating</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="mobile-toggle" aria-label="toggle menu" onclick="toggleNav()">☰</button>
+        <ul id="mainNav">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:14px">
+        <a class="phone" href="tel:+919876543210">+91 98765 43210</a>
+        <a class="cta" href="#contact">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="hero-card">
+          <div style="display:flex;justify-content:space-between;align-items:start;gap:12px">
+            <div>
+              <h2>Premium metal finishing & protective coatings for industry</h2>
+              <p class="lead">We deliver electroless nickel plating, protective coatings, polishing and inspection for automotive, aerospace and manufacturing clients.</p>
+              <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+                <span class="pill">Turnaround: 2-3 days</span>
+                <span class="pill">Quality: ISO-level inspections & certifications</span>
+                <span class="pill">Quote SLA: 24 hours</span>
+              </div>
+
+              <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+                <a class="cta" href="#contact">Request a Quote</a>
+                <a href="mailto:contact@psmetaltech.com" style="font-weight:700">contact@psmetaltech.com</a>
+              </div>
+
+              <div class="kpis" aria-hidden>
+                <div class="kpi">Projects completed<br><strong>1,200+</strong></div>
+                <div class="kpi">Sectors<br><strong>Automotive, Aero, Mfg</strong></div>
+                <div class="kpi">Response SLA<br><strong>24 hours</strong></div>
+              </div>
+            </div>
+
+            <div style="min-width:260px;display:flex;flex-direction:column;gap:12px">
+              <div style="background:#eef9fb;border-radius:12px;padding:16px;text-align:center">
+                <strong>Need fast turnarounds?</strong>
+                <div class="muted" style="font-size:13px">Typical lead times: 2-3 days</div>
+              </div>
+              <div style="background:#fff;border-radius:12px;padding:16px;text-align:center;border:1px solid #eef6f7">
+                <strong>Industries</strong>
+                <div class="muted" style="font-size:13px">Automotive · Aerospace · Manufacturing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="services" style="margin-top:18px">
+          <h3 style="margin-bottom:10px">Our Services</h3>
+          <div class="services">
+            <article class="service">
+              <h3>Electroless Nickel Plating</h3>
+              <p>Uniform corrosion and wear protection, ideal for complex geometries and tight tolerances.</p>
+            </article>
+            <article class="service">
+              <h3>Surface Finishing</h3>
+              <p>Polishing and deburring to meet cosmetic and dimensional requirements.</p>
+            </article>
+            <article class="service">
+              <h3>Custom Coatings</h3>
+              <p>PTFE, ceramic and specialized builds tailored to your application.</p>
+            </article>
+          </div>
+        </section>
+
+      </div>
+
+<aside id="contact">
+  <div class="contact">
+    <h3 style="margin-top:0">Request a quote</h3>
+    <form id="quoteForm" onsubmit="sendQuote(event)">
+      ...
+    </form>
+    <div style="margin-top:12px;font-size:14px;color:var(--muted)">
+      Or email us at <a href="mailto:contact@psmetaltech.com">contact@psmetaltech.com</a>
+    </div>
+  </div>
+</aside>
+
+    </section>
+
+    <section id="about" class="split">
+      <div class="hero-card">
+        <h3>About Shine and Shield</h3>
+        <p class="muted">Shine and shield combines experienced technicians with traceable processes to deliver consistent, certified results for both small-run and volume production.</p>
+        <ul class="bullets" style="margin-top:12px">
+          <li>In-house lab & metrology</li>
+          <li>Batch tracking & certifications</li>
+          <li>Flexible production schedules</li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <h3>Why choose us?</h3>
+        <p class="muted">Clear communication, competitive pricing and compliance with industrial standards.</p>
+        <ul class="bullets" style="margin-top:12px">
+          <li>Reliable lead times</li>
+          <li>Quality-first inspections</li>
+          <li>Technical consultation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="why" style="margin-top:22px;display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+      <div style="flex:1;min-width:220px;background:linear-gradient(180deg,#fff,#f7fffe);padding:18px;border-radius:12px;border:1px solid #eef6f7">
+        <h4 style="margin:0 0 6px">Quality & Compliance</h4>
+        <p class="muted" style="margin:0">ISO-level inspections & certifications; full batch traceability and material reports available on request.</p>
+      </div>
+
+      <div style="min-width:220px;background:#fff;padding:18px;border-radius:12px;border:1px solid #eef6f7">
+        <h4 style="margin:0 0 6px">Fast Quotes</h4>
+        <p class="muted" style="margin:0">We respond to RFQs within our Quote SLA of 24 hours to keep your project moving.</p>
+      </div>
+
+      <div style="min-width:220px;background:#fff;padding:18px;border-radius:12px;border:1px solid #eef6f7">
+        <h4 style="margin:0 0 6px">Manufacturing Support</h4>
+        <p class="muted" style="margin:0">Technical consultation for specification, tolerances and coating selection to fit your process.</p>
+      </div>
+    </section>
+
+<section id="vision-mission" style="margin-top:36px">
+  <h3 style="margin-bottom:16px">Vision, Mission & Guiding Principles</h3>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+    
+    <!-- Vision -->
+    <div style="background:#fff;padding:20px;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,0.06)">
+      <h4 style="margin-bottom:8px;color:#333">Our Vision</h4>
+      <p style="color:#555;font-size:15px;line-height:1.6">
+        To be a trusted leader in surface coating and metal finishing, 
+        delivering innovative, sustainable, and reliable solutions 
+        that empower industries worldwide.
+      </p>
+    </div>
+    
+    <!-- Mission -->
+    <div style="background:#fff;padding:20px;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,0.06)">
+      <h4 style="margin-bottom:8px;color:#333">Our Mission</h4>
+      <p style="color:#555;font-size:15px;line-height:1.6">
+        To consistently provide high-quality coatings and finishes 
+        through advanced technology, certified processes, and 
+        customer-focused service while ensuring environmental 
+        responsibility and operational excellence.
+      </p>
+    </div>
+    
+    <!-- Guiding Principles -->
+    <div style="background:#fff;padding:20px;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,0.06)">
+      <h4 style="margin-bottom:8px;color:#333">Our Guiding Principles</h4>
+      <ul style="color:#555;font-size:15px;line-height:1.8;margin:0;padding-left:20px">
+        <li>Integrity in every process and promise</li>
+        <li>Commitment to quality and reliability</li>
+        <li>Continuous innovation and improvement</li>
+        <li>Respect for people, safety, and environment</li>
+        <li>Customer success is our success</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
+<section id="directors-message" style="margin-top:36px">
+  <h3 style="margin-bottom:16px">Director's Message</h3>
+  
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:24px;background:#fff;padding:20px;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,0.06)">
+    
+    <!-- Director Photo -->
+    <img src="images/director.jpg" alt="Director of Shine and Shield" style="width:160px;height:160px;object-fit:cover;border-radius:50%;box-shadow:0 3px 10px rgba(0,0,0,0.1)" />
+    
+    <!-- Message -->
+    <div style="flex:1;min-width:260px">
+      <p style="color:#555;font-size:15px;line-height:1.6;margin-bottom:12px">
+        At <strong>Shine and Shield</strong>, our mission has always been to combine 
+        technical expertise with innovation and integrity.  
+        Every project we undertake is driven by our commitment to quality, 
+        customer satisfaction, and sustainable growth.  
+        I personally thank all our clients, partners, and team members 
+        for being part of this journey.
+      </p>
+      <p style="font-weight:bold;margin:0">— [DSP], Managing Director</p>
+    </div>
+    
+  </div>
+</section>
+
+
+<section id="factory" style="margin-top:36px">
+  <h3 style="margin-bottom:16px">Our Factory</h3>
+  <p class="muted">Take a look inside our facility where precision meets quality.</p>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-top:18px">
+    
+    <figure style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,0.06)">
+      <img src="images/factory1.jpg" alt="Nickel plating line" style="width:100%;display:block" />
+      <figcaption style="padding:10px;font-size:14px;color:#555">Nickel plating line for precision components</figcaption>
+    </figure>
+    
+    <figure style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,0.06)">
+      <img src="images/factory2.jpg" alt="Inspection lab" style="width:100%;display:block" />
+      <figcaption style="padding:10px;font-size:14px;color:#555">Quality inspection lab with metrology equipment</figcaption>
+    </figure>
+    
+    <figure style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,0.06)">
+      <img src="images/factory3.jpg" alt="Surface finishing area" style="width:100%;display:block" />
+      <figcaption style="padding:10px;font-size:14px;color:#555">Surface finishing and polishing section</figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+<section id="contact" class="contact-section" style="padding:60px 20px; background:#f7fafa;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:20px;">Contact Us</h2>
+    <p style="text-align:center; color:var(--muted); margin-bottom:40px;">
+      Get in touch with us for quotes, queries, or technical consultation.
+    </p>
+
+    <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+      <!-- Contact Details -->
+      <div style="flex:1; min-width:280px; max-width:400px;">
+        <h3>Contact Details</h3>
+        <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p><strong>Email:</strong> <a href="mailto:contact@psmetaltech.com">contact@psmetaltech.com</a></p>
+        <p><strong>Address:</strong><br> PS MetalTech, Industrial Area, Your City, India</p>
+      </div>
+
+      <!-- Contact Form -->
+      <div style="flex:1; min-width:280px; max-width:400px;">
+        <h3>Request a Quote</h3>
+        <form id="quoteForm" onsubmit="sendQuote(event)">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="details" rows="4" placeholder="Project details"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <strong>Shine and Shield</strong>
+          <div class="muted">Surface Coating & Metal Finishing</div>
+        </div>
+        <div style="text-align:right">
+          <div>Phone: <a href="tel:+919876543210">+91 98765 43210</a></div>
+          <div>Email: <a href="mailto:contact@psmetaltech.com">contact@psmetaltech.com</a></div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    function toggleNav(){
+      const nav = document.getElementById('mainNav');
+      if(!nav.style.display || nav.style.display === 'none') nav.style.display = 'flex'; else nav.style.display = 'none';
+    }
+
+    function sendQuote(e){
+      e.preventDefault();
+      // very simple in-browser confirmation — replace with real API call on the server
+      const name = document.getElementById('name').value || 'Customer';
+      alert('Thanks, ' + name + '! Your request has been noted. Our team will contact you within 24 hours.');
+      document.getElementById('quoteForm').reset();
+    }
+  </script>
+</body>
+</html>
