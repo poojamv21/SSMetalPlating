@@ -26,7 +26,20 @@
     header{background:linear-gradient(90deg,#ffffffcc, #f5fbfc);backdrop-filter:saturate(120%) blur(6px);position:sticky;top:0;z-index:40;border-bottom:1px solid #e6eef0}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    ..logo {
+  width:46px;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.logo img {
+  width:100%;
+  height:100%;
+  object-fit:contain; /* keeps proportions */
+}
+
     .brand h1{font-size:16px;margin:0}
     .tag{font-size:12px;color:var(--muted);margin-top:2px}
     nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
